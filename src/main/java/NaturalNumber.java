@@ -1,5 +1,5 @@
 public class NaturalNumber {
-    private int naturalNumber;
+    private final int naturalNumber;
 
     private NaturalNumber(int naturalNumber) {
         if (naturalNumber < 1) {

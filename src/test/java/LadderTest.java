@@ -9,8 +9,8 @@ class LadderTest {
     @Test
     public void 사다리_생성() throws Exception {
         //given
-        int numberOfPerson = 3;
-        int row = 3;
+        NaturalNumber numberOfPerson = NaturalNumber.from(3);
+        NaturalNumber row = NaturalNumber.from(3);
         Ladder ladder = new Ladder(row, numberOfPerson);
 
         //when
@@ -22,8 +22,8 @@ class LadderTest {
     @Test
     public void 사다리_라인생성() throws Exception {
         //given
-        int numberOfPerson = 2;
-        int row = 2;
+        NaturalNumber numberOfPerson = NaturalNumber.from(2);
+        NaturalNumber row = NaturalNumber.from(2);
         Ladder ladder = new Ladder(row, numberOfPerson);
 
         //when
@@ -38,8 +38,8 @@ class LadderTest {
     @Test
     public void 사다리_라인생성_범위처리() throws Exception {
         //given
-        int numberOfPerson = 4;
-        int row = 2;
+        NaturalNumber numberOfPerson = NaturalNumber.from(4);
+        NaturalNumber row = NaturalNumber.from(2);
         Ladder ladder = new Ladder(row, numberOfPerson);
 
         //when
@@ -54,8 +54,8 @@ class LadderTest {
     @Test
     public void 사다리_라인생성_예외처리() throws Exception {
         //given
-        int numberOfPerson = 2;
-        int row = 2;
+        NaturalNumber numberOfPerson = NaturalNumber.from(2);
+        NaturalNumber row = NaturalNumber.from(2);
         Ladder ladder = new Ladder(row, numberOfPerson);
 
         //when
@@ -72,8 +72,8 @@ class LadderTest {
     @Test
     public void 사다리_이동() throws Exception {
         //given
-        int numberOfPerson = 3;
-        int row = 4;
+        NaturalNumber numberOfPerson = NaturalNumber.from(3);
+        NaturalNumber row = NaturalNumber.from(4);
         Ladder ladder = new Ladder(row, numberOfPerson);
 
 
