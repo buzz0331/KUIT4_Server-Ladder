@@ -57,12 +57,11 @@ class LadderTest {
         NaturalNumber numberOfPerson = NaturalNumber.from(2);
         NaturalNumber row = NaturalNumber.from(2);
         Ladder ladder = new Ladder(row, numberOfPerson);
-
-        //when
         Position position = new Position(NaturalNumber.from(1), NaturalNumber.from(1));
         Position position1 = new Position(NaturalNumber.from(1), NaturalNumber.from(2));
         ladder.drawLine(position);
-//        ladder.drawLine(position);
+
+        //when
 
         //then
         assertThatThrownBy(() -> ladder.drawLine(position1))
@@ -75,13 +74,13 @@ class LadderTest {
         NaturalNumber numberOfPerson = NaturalNumber.from(3);
         NaturalNumber row = NaturalNumber.from(4);
         Ladder ladder = new Ladder(row, numberOfPerson);
-
-
-        //when
         ladder.drawLine(new Position(NaturalNumber.from(1), NaturalNumber.from(1)));
         ladder.drawLine(new Position(NaturalNumber.from(2), NaturalNumber.from(2)));
         ladder.drawLine(new Position(NaturalNumber.from(3), NaturalNumber.from(2)));
         ladder.drawLine(new Position(NaturalNumber.from(4), NaturalNumber.from(2)));
+
+
+        //when
         int result = ladder.run(NaturalNumber.from(1));
 
         //then
