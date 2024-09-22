@@ -43,4 +43,8 @@ public class Position {
     private static boolean isPosition(int position) {
         return position >= 0;
     }
+
+    public boolean isSamePosition(int i) {
+        return this.position == i;
+    }
 }

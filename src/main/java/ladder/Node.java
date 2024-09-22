@@ -25,6 +25,10 @@ public class Node {
         }
     }
 
+    public void printNode() {
+        System.out.print(direction.getValue());
+    }
+
     public void setRightNode() {
         direction = RIGHT;
     }

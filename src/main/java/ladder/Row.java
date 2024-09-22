@@ -58,4 +58,24 @@ public class Row {
         return lineAtPosition;
     }
 
+    public void printRow() {
+        for (int i = 0; i < nodes.length; i++) {
+            nodes[i].printNode();
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+    public void printStarRow(Position position) {
+        for (int i = 0; i < nodes.length; i++) {
+            nodes[i].printNode();
+
+            if (position.isSamePosition(i)) {
+                System.out.print("*");
+            }
+
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
 }
