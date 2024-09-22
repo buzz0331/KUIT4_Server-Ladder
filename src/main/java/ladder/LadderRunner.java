@@ -1,5 +1,7 @@
 package ladder;
 
+import static ladder.TimePeriod.*;
+
 public class LadderRunner {
 
     private final Row[] rows;
@@ -13,13 +15,13 @@ public class LadderRunner {
     public int run(Position position) {
         for (int i = 0; i < rows.length; i++) {
             //Before
-            System.out.println("Before");
+            System.out.println(BEFORE);
             printLadder(position, i);
 
             rows[i].nextPosition(position);
 
             //After
-            System.out.println("After");
+            System.out.println(AFTER);
             printLadder(position, i);
         }
         return position.getValue();
