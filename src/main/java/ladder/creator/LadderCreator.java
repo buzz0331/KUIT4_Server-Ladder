@@ -22,4 +22,8 @@ public class LadderCreator {
     public Row[] getRows() {
         return rows;
     }
+
+    public void drawRandomLine(Position row, Position col) {
+        rows[row.getValue()].drawRandomLine(col);
+    }
 }
