@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'kuit.com'
@@ -15,8 +16,12 @@ dependencies {
 
     // Assertj 라이브러리 추가
     testImplementation("org.assertj:assertj-core:3.26.3")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
 }
