@@ -18,14 +18,6 @@ public class Row {
         setDirectionBetweenNextPosition(startPosition);
     }
 
-    //사다리의 Line을 랜덤으로 자동 생성할때 사용하는 메서드
-    public void drawRandomLine(Position startPosition) {
-        validateDrawLinePosition(startPosition);
-        validateSideDrawLinePosition(startPosition);
-
-        setDirectionBetweenNextPosition(startPosition);
-    }
-
     public void nextPosition(Position position) {
         validatePosition(position);
 
@@ -49,20 +41,6 @@ public class Row {
         if (isLineAtPosition(startPosition) || isLineAtNextPosition(startPosition)) {
             throw new IllegalArgumentException(ExceptionMessage.INVALID_DRAW_POSITION.getMessage());
         }
-    }
-
-    private void validateSideDrawLinePosition(Position startPosition) {
-        //그리는 선 오른쪽 검증
-        startPosition.next();
-        validatePosition(startPosition);
-
-        //그리는 선 왼쪽 검증
-        startPosition.prev();
-        startPosition.prev();
-        validatePosition(startPosition);
-
-        startPosition.next();
-
     }
 
     private boolean isInvalidPosition(Position position) {
