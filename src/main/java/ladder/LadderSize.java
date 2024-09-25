@@ -1,12 +1,10 @@
-package ladder.creator;
-
-import ladder.GreaterThanOne;
+package ladder;
 
 public class LadderSize {
     private final GreaterThanOne numberOfPerson;
     private final GreaterThanOne numberOfRow;
 
-    public LadderSize(GreaterThanOne numberOfPerson, GreaterThanOne numberOfRow) {
+    public LadderSize(GreaterThanOne numberOfRow, GreaterThanOne numberOfPerson) {
         this.numberOfPerson = numberOfPerson;
         this.numberOfRow = numberOfRow;
     }

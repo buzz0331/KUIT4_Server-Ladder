@@ -10,6 +10,7 @@ public class LadderRunner {
         this.rows = rows;
     }
 
+    //todo StringBuilder 사용하기
     public int run(Position position) {
         for (int running_row = 0; running_row < rows.length; running_row++) {
             //Before
@@ -27,11 +28,15 @@ public class LadderRunner {
 
     private void printLadder(Position position, int running_row) {
         for (int i = 0; i < rows.length; i++) {
-            if (running_row == i) {
+            if (isSameRow(running_row, i)) {
                 rows[i].printStarRow(position);
                 continue;
             }
             rows[i].printRow();
         }
+    }
+
+    private static boolean isSameRow(int running_row, int i) {
+        return running_row == i;
     }
 }

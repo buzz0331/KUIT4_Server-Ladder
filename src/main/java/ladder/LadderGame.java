@@ -1,7 +1,6 @@
 package ladder;
 
 import ladder.creator.LadderCreator;
-import ladder.creator.LadderGameFactory;
 
 public class LadderGame {
 
@@ -15,5 +14,9 @@ public class LadderGame {
         LadderRunner ladderRunner = new LadderRunner(ladderCreator.getRows());
         ladderRunner.run(position);
         return position.getValue();
+    }
+
+    public LadderCreator getLadderCreator() {
+        return ladderCreator;
     }
 }
