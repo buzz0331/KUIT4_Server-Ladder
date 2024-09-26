@@ -1,4 +1,7 @@
-package ladder;
+package ladder.game;
+
+import ladder.Position;
+import ladder.Row;
 
 import static ladder.TimePeriod.*;
 
@@ -23,7 +26,7 @@ public class LadderRunner {
             sb.append(AFTER.getTimePeriod() + "\n");
             printLadder(position, running_row, sb);
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
         return position.getValue();
     }
 

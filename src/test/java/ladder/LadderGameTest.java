@@ -2,6 +2,8 @@ package ladder;
 
 import ladder.creator.LadderCreator;
 import ladder.creator.ManualLadderCreator;
+import ladder.game.LadderGame;
+import ladder.game.LadderGameFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

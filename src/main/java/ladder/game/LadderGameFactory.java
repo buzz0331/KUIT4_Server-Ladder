@@ -1,10 +1,9 @@
-package ladder;
+package ladder.game;
 
+import ladder.LadderSize;
 import ladder.creator.AutoLadderCreator;
 import ladder.creator.LadderCreator;
 import ladder.creator.ManualLadderCreator;
-
-import java.util.Random;
 
 public class LadderGameFactory {
 

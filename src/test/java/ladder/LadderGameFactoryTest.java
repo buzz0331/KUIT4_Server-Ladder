@@ -1,9 +1,8 @@
 package ladder;
 
-import ladder.creator.AutoLadderCreator;
-import ladder.creator.LadderCreator;
+import ladder.game.LadderGame;
+import ladder.game.LadderGameFactory;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 class LadderGameFactoryTest {
