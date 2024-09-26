@@ -10,29 +10,30 @@ public class LadderRunner {
         this.rows = rows;
     }
 
-    //todo StringBuilder 사용하기
     public int run(Position position) {
+        StringBuilder sb = new StringBuilder();
         for (int running_row = 0; running_row < rows.length; running_row++) {
             //Before
-            System.out.println(BEFORE.getTimePeriod());
-            printLadder(position, running_row);
+            sb.append(BEFORE.getTimePeriod() + "\n");
+            printLadder(position, running_row, sb);
 
             rows[running_row].nextPosition(position);
 
             //After
-            System.out.println(AFTER.getTimePeriod());
-            printLadder(position, running_row);
+            sb.append(AFTER.getTimePeriod() + "\n");
+            printLadder(position, running_row, sb);
         }
+        System.out.println(sb.toString());
         return position.getValue();
     }
 
-    private void printLadder(Position position, int running_row) {
+    private void printLadder(Position position, int running_row, StringBuilder sb) {
         for (int i = 0; i < rows.length; i++) {
             if (isSameRow(running_row, i)) {
-                rows[i].printStarRow(position);
+                rows[i].printStarRow(position, sb);
                 continue;
             }
-            rows[i].printRow();
+            rows[i].printRow(sb);
         }
     }
 

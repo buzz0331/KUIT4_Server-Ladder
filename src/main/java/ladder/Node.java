@@ -25,8 +25,8 @@ public class Node {
         }
     }
 
-    public void printNode() {
-        System.out.print(direction.getValue());
+    public void printNode(StringBuilder sb) {
+        sb.append(direction.getValue());
     }
 
     public void setRightNode() {
